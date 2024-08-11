@@ -38,8 +38,6 @@ header h2{
 
 .left {
   grid-column: 1;
-  border-style: solid;
-  border-color: black;
 }
 
 ul {
@@ -55,8 +53,8 @@ li a {
 }
 
 li a:hover {
-  background-color: rgba(210, 136, 214, 0.5);
-  transition: all 0.5s linear;
+  background-image: linear-gradient(rgb(210, 136, 214, 0.5), rgb(235, 163, 28, 0.5), rgb(230, 211, 115, 0.5));
+  transition: all 0.2s linear;
   padding: 4px;
   border-radius: 8px;
   overflow: visible;
@@ -76,7 +74,7 @@ main {
 }
 
 .main-card {
-  background-color: rgba(210, 136, 214, 0.5);
+  background-image: linear-gradient(rgb(210, 136, 214, 0.5), rgb(235, 163, 28, 0.5), rgb(230, 211, 115, 0.5));
   width: 50%;
   place-self: center;
   border-radius: 8px;
@@ -93,6 +91,32 @@ main {
 .card {
   background-color: white;
   color: black;
+  grid-template-rows: 100px 50px;
+  grid-template-columns: 0.05fr 0.95fr;
+  border-radius: 10px;
+  /* ! you probably need to update this. It's specific to your computer */
+  width: 284px;
+  height: 127px;
+}
+
+.project-pic {
+  display: none;
+}
+
+.card:hover {
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s linear;
+}
+
+.card:hover > .project-pic {
+  display: block;
+  transition: all 0.3s linear;
+}
+
+.project-pic img {
+  width: 90%;
+  height: 90%;
   border-radius: 8px;
 }
 
