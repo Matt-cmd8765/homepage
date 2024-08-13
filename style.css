@@ -80,8 +80,18 @@ main {
   width: 50%;
   place-self: center;
   border-radius: 8px;
-  padding: 5em;
+  padding: 3em;
   grid-row: 1;
+  display: grid;
+  grid-template-columns: 25% auto;
+  grid-template-rows: ;
+}
+
+.main-card-left img {
+  width: 25%;
+  height: 25%;
+  border-radius: 8px;
+  box-shadow: gray;
 }
 
 .projects {
@@ -90,7 +100,6 @@ main {
   grid-template-columns: auto auto auto;
   column-gap: 1em;
   grid-row:  2 / 3;
-  height: 400px;
 }
 
 .projects h2 {
@@ -103,23 +112,19 @@ main {
   grid-template-rows: 100px 50px;
   grid-template-columns: 0.05fr 0.95fr;
   border-radius: 10px;
-  /* ! you probably need to update this. It's specific to your computer */
-  width: 284px;
-  height: 127px;
+  height: 50%;
   grid-row: 2;
-  align-self: start;
 }
 
 .card:hover {
   height: 100%;
-  width: 100%;
   transition: all 0.3s ease-in-out;
 }
 
 .project-pic {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.3s linear;
+  transition: visibility 0s, opacity 0.6s linear;
 }
 
 .card:hover > .project-pic {
@@ -136,7 +141,7 @@ main {
 .github_card_icon {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.3s linear;
+  transition: visibility 0s, opacity 0.6s linear;
 }
 
 .card:hover > .github_card_icon {
@@ -148,6 +153,10 @@ fieldset {
   display: flex;
   flex-direction: column;
   grid-row: 4;
+}
+
+.right {
+  margin-right: 5%;
 }
 
 footer {
