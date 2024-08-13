@@ -70,7 +70,9 @@ main {
   grid-row: 2;
   text-align: center;
   display: grid;
+  grid-template-rows: repeat(4, auto);
   margin-right: 2rem;
+  row-gap: 2rem;
 }
 
 .main-card {
@@ -79,13 +81,20 @@ main {
   place-self: center;
   border-radius: 8px;
   padding: 5em;
-
+  grid-row: 1;
 }
 
 .projects {
   display: grid;
+  grid-template-rows: auto auto;
   grid-template-columns: auto auto auto;
   column-gap: 1em;
+  grid-row:  2 / 3;
+  height: 400px;
+}
+
+.projects h2 {
+  grid-row: 1;
 }
 
 .card {
@@ -97,21 +106,25 @@ main {
   /* ! you probably need to update this. It's specific to your computer */
   width: 284px;
   height: 127px;
-}
-
-.project-pic {
-  display: none;
+  grid-row: 2;
+  align-self: start;
 }
 
 .card:hover {
   height: 100%;
   width: 100%;
-  transition: all 0.3s linear;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-pic {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
 }
 
 .card:hover > .project-pic {
-  display: block;
-  transition: all 0.3s linear;
+  visibility: visible;
+  opacity: 1;
 }
 
 .project-pic img {
@@ -120,9 +133,21 @@ main {
   border-radius: 8px;
 }
 
+.github_card_icon {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+
+.card:hover > .github_card_icon {
+  visibility: visible;
+  opacity: 1;
+}
+
 fieldset {
   display: flex;
   flex-direction: column;
+  grid-row: 4;
 }
 
 footer {
