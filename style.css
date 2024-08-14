@@ -77,21 +77,31 @@ main {
 
 .main-card {
   background-image: linear-gradient(rgb(210, 136, 214, 0.5), rgb(235, 163, 28, 0.5), rgb(230, 211, 115, 0.5));
-  width: 50%;
+  width: 75%;
   place-self: center;
   border-radius: 8px;
-  padding: 3em;
   grid-row: 1;
-  display: grid;
+  display: grid; 
   grid-template-columns: 25% auto;
-  grid-template-rows: ;
+  grid-template-rows: 25% auto;
+  grid-column-gap: 1rem;
+}
+
+.main-card-right {
+  padding: 2rem;
+}
+
+.main-card-left {
+  padding: 2rem;
 }
 
 .main-card-left img {
-  width: 25%;
-  height: 25%;
+  width: 10rem;
+  height: 15rem;
   border-radius: 8px;
   box-shadow: gray;
+  grid-column: 1;
+  grid-row: 1 / 2;
 }
 
 .projects {
