@@ -159,10 +159,52 @@ main {
   opacity: 1;
 }
 
-fieldset {
-  display: flex;
-  flex-direction: column;
-  grid-row: 4;
+input {
+  border-radius: 8px;
+}
+
+textarea {
+  resize: none;
+  border-radius: 8px;
+}
+
+input[type=text], input[type=email],  textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 1em;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+  box-shadow: 0 0 10px rgb(247, 171, 8);
+  padding: 1em;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgb(247, 171, 8);
+}
+
+button {
+  border: none;
+  background: none;
+  border: 1px solid rgb(242, 198, 109, 0.7);; /* Green */
+  color: white;
+  padding: 15px 32px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bolder;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(242, 198, 109, 0.9);
 }
 
 .right {
