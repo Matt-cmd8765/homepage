@@ -170,15 +170,17 @@ form {
 textarea {
   height: 150px;
   width: 300px;
+  resize: none;
+  border-radius: 8px;
 }
 
 input {
   border-radius: 8px;
+  width: 40%;
 }
 
-textarea {
-  resize: none;
-  border-radius: 8px;
+input#email {
+  width: 42%;
 }
 
 .form-name {
@@ -190,6 +192,10 @@ textarea {
   padding-bottom: 10px;
   grid-column: 1;
   padding-left: 2em;
+}
+
+.form-message {
+  padding-left: 10%;
 }
 
 input[type=text], input[type=email],  textarea {
@@ -211,8 +217,12 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
   border: 1px solid rgb(247, 171, 8);
 }
 
+.button {
+  text-align: center;
+  padding-left: 10%;
+}
+
 button {
-  border: none;
   background: none;
   border: 3px solid rgb(242, 198, 109, 0.7);
   color: white;
@@ -224,6 +234,7 @@ button {
   display: inline-block;
   font-size: 16px;
   transition-duration: 0.4s;
+  width: 20%;
 }
 
 button:hover {
